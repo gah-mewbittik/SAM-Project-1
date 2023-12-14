@@ -7,10 +7,18 @@
     display: flex;
     flex-direction: row;
     justify-content: end;
-    margin-right: 10%;
+    margin-left: 55%;
+    margin-top: 2.5%;
 }
 
-#projectDescription{
+#project-details{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-header{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +32,16 @@
 }
 #city-input{
     font-size: 20px;
+    border-radius: 4px;
+    
 }
+#city-input:focus{
+    border-color: yellow;
+}
+#city-input:active{
+    border-color: yellow;
+}
+
 #cityInputBtn{
     font-size: 20px;
     background-color: blue;
@@ -35,6 +52,19 @@
 }
 
 #cityInputBtn:hover{
-    background-color: yellowgreen;
+    background-color: rgb(238, 238, 35);
     color:blue;
+}
+
+#logo{
+    width: 10%;
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
 }
