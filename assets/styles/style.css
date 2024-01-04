@@ -82,24 +82,90 @@ header{
 
 .town-results{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-right: 50px;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding: 50px;
+    margin-left: 300px;
 }
 
 .weather-map-display{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    width: 100%;
+   
 }
 
 .show-currentWeather{
-    padding-left: 50px;
+    padding-left: 0px;
     padding-right: 25px;
+    
 }
 
 .show-map{
     display: flex;
     flex-direction: row;
     margin-left: 100px;
+    margin-top:10px;
     
+}
+/* Weather card and its details START*/
+.currentCardContainer{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid  darkkhaki;
+    border-radius: 8px;
+    padding-left: 50px;
+    padding-right: 40px;
+    margin-top:25px;
+}
+
+#currentDateID{
+    font-size: 30px;
+    width: 300px;
+    color: blue;
+}
+
+.currentImageIcon{
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    margin-left: 0;
+}
+
+#temp{
+    font-size: 20px;
+    margin: 15px;
+    color: blue;
+}
+
+#wind{
+    font-size: 20px;
+    margin: 15px;
+    color: blue;
+}
+/* Weather card and its details END */
+
+.townResultsContainer{
+    display: flex;
+}
+
+.historicTownList{
+    width: 200px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background: linear-gradient(to right, #00d2ff 0%, #3a7bd5 60%, #00d2ff 100%); 
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+   margin-left: -45px;
+   margin-top: 10px;
+}
+.historicTownList:hover{
+    background: linear-gradient(to right, #3a7bd5 0%, #00d2ff 60%, #3a7bd5 100%); 
 }

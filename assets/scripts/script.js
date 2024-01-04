@@ -52,7 +52,7 @@ function fetchAndDisplayWeather(cityName) {
               var lat = town.lat;
               var lon = town.lon;
               //pushing user input to theTownList array
-            
+              
               // Weather Forecast API
               var urlApi = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=e5814fee5eda4d4a8e524afc1139e11e';
               //push Town latitude and longitude
@@ -137,7 +137,7 @@ function displayTownList(){
         liEl.addEventListener('click', function(event){
             //var index = event.target.getAttribute('data-index');
             // displayPastWeather(index);
-            
+           // TODO: fix click to show city on CLICK
             console.log('fetch and display for: ', searchHistory[event.target.dataset.index]);
             fetchAndDisplayWeather(searchHistory[event.target.dataset.index]);
         });
