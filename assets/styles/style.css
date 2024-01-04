@@ -37,19 +37,19 @@
     flex-direction: row;
     justify-content: center;
 }
-#city-input{
+#town-input{
     font-size: 20px;
     border-radius: 4px;
     
 }
-#city-input:focus{
+#town-input:focus{
     border-color: yellow;
 }
-#city-input:active{
+#town-input:active{
     border-color: yellow;
 }
 
-#cityInputBtn{
+#townInputBtn{
     font-size: 20px;
     /*background-color: blue;*/
     background: linear-gradient(to right, #00d2ff 0%, #3a7bd5 60%, #00d2ff 100%); 
@@ -59,7 +59,7 @@
     padding: 5px;
 }
 
-#cityInputBtn:hover{
+#townInputBtn:hover{
     /*background-color: rgb(238, 238, 35);*/
     color:white;
     background: linear-gradient(to right, #3a7bd5 0%, #00d2ff 60%, #3a7bd5 100%);
