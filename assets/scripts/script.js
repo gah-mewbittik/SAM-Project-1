@@ -28,7 +28,7 @@ function sweepDays(i){
 function acquireTownData(event){
     event.preventDefault();
 
-    // alert if undefined or null --- REPLACE ALERT with Bootstrap alert or HTML
+    // alert if undefined or null --- TODO: REPLACE ALERT with Bootstrap alert or HTML
     if(!townInput.value){
         alert("Please, Enter a City.")
         return;
