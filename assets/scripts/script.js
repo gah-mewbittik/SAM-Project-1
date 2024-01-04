@@ -70,7 +70,7 @@ function fetchAndDisplayWeather(cityName) {
                       displayCurrentForecast(data);
                       storeTownLatLog();
                       //displayPastWeather(0);
-  
+                      displayTownList(); // Added this HERE TODO: review
                       //clear input
                       townInput.value= '';
                   })
