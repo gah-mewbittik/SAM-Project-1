@@ -28,7 +28,7 @@ function sweepDays(i){
 function acquireTownData(event){
     event.preventDefault();
 
-    // alert if undefined or null --- TODO: REPLACE ALERT with Bootstrap alert or HTML
+    // alert  TODO: REPLACE ALERT with Bootstrap alert or HTML
     if(!townInput.value){
         alert("Please, Enter a City.")
         return;
@@ -70,11 +70,10 @@ function fetchAndDisplayWeather(cityName) {
                         searchHistory.push(cityName);
                       } 
                       
-                      console.log('data 61', data);
                       displayCurrentForecast(data);
                       storeTownLatLog();
-                      //displayPastWeather();
-                      displayTownList(); // Added this HERE TODO: review
+                      
+                      displayTownList(); 
                       //clear input
                       townInput.value= '';
                   })
@@ -124,7 +123,6 @@ function displayCurrentForecast(data){
 function storeTownLatLog(){
     localStorage.setItem("theTownList", JSON.stringify(searchHistory));
     
-   // localStorage.setItem("townLinks", JSON.stringify(townLinks));
 }
 
 //function that generates list of Towns/cities entered
@@ -139,45 +137,13 @@ function displayTownList(){
         liEl.textContent = cityName;
         liEl.setAttribute('data-index', i);
         liEl.addEventListener('click', function(event){
-             //var index = event.target.getAttribute('data-index');
-             //displayPastWeather(index);
-           // TODO: fix click to show city on CLICK
-            console.log('fetch and display for: ', searchHistory[event.target.dataset.index]);
+           
             fetchAndDisplayWeather(searchHistory[event.target.dataset.index]);
         });
         townListEl.appendChild(liEl);
     }
 
 }
-
-// TODO: delete this function
-//function that gets past weather data
-// function displayPastWeather(index){
-//     var townName = searchHistory[index];
-
-//     var latitudeIndex = index * 2;
-//     var longitudeIndex = latitudeIndex + 1;
-//     console.log(townLinks, latitudeIndex, longitudeIndex);
-//     var latitude = townLinks[latitudeIndex];
-//     var longitude = townLinks[longitudeIndex];
-
-//     var urlApi = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + latitude + '&lon=' + longitude + '&appid=e5814fee5eda4d4a8e524afc1139e11e';
-
-//     fetch(urlApi)
-//         .then(function(response){
-//             return response.json();
-//         })
-//         .then(function(data){
-//             console.log('data 158', data);
-//             displayCurrentForecast(data);
-//             storeTownLatLog(data);
-//             displayTownList(data);
-
-//             //clear input
-//             townInput.value = '';
-//         })
-
-// }
 
 //Init function
 function init(){
