@@ -65,11 +65,15 @@ function fetchAndDisplayWeather(cityName) {
                   .then(function(data){
                       // at this point, fetch is complete
                       //function calls
-                      searchHistory.push(cityName);
+                      cityName = cityName.toLowerCase();
+                      if(searchHistory.indexOf(cityName) === -1){
+                        searchHistory.push(cityName);
+                      } 
+                      
                       console.log('data 61', data);
                       displayCurrentForecast(data);
                       storeTownLatLog();
-                      //displayPastWeather(0);
+                      //displayPastWeather();
                       displayTownList(); // Added this HERE TODO: review
                       //clear input
                       townInput.value= '';
@@ -135,8 +139,8 @@ function displayTownList(){
         liEl.textContent = cityName;
         liEl.setAttribute('data-index', i);
         liEl.addEventListener('click', function(event){
-            //var index = event.target.getAttribute('data-index');
-            // displayPastWeather(index);
+             //var index = event.target.getAttribute('data-index');
+             //displayPastWeather(index);
            // TODO: fix click to show city on CLICK
             console.log('fetch and display for: ', searchHistory[event.target.dataset.index]);
             fetchAndDisplayWeather(searchHistory[event.target.dataset.index]);
@@ -149,7 +153,7 @@ function displayTownList(){
 // TODO: delete this function
 //function that gets past weather data
 // function displayPastWeather(index){
-//     var townName = theTownList[index];
+//     var townName = searchHistory[index];
 
 //     var latitudeIndex = index * 2;
 //     var longitudeIndex = latitudeIndex + 1;
