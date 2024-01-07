@@ -2,11 +2,9 @@
 
 # Description
 
-The purpose of this project is to use all front end development skill acquired. Developing this project demonstrates... s
-
-The following is an image of the City Forecast application.
-![Alt text](./assets/images/) 
-
+This is a comprehensive web application that assists users in planning their travels by providing detailed information on destinations, 
+along with real-time weather updates. The app aims to be user-friendly, offering an intuitive interface that seamlessly combines travel 
+planning and weather forecasting features.
 
 
 ## Installation
@@ -27,6 +25,7 @@ From there you will be able view the application and use it by simply clicking i
 
 # Link to deployed application
 
+https://gah-mewbittik.github.io/SAM-Project-1/
 
 ## Credits
 
