@@ -1,58 +1,86 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.112.5">
     <title>Global Glimpse Voyage</title>
-    <link rel="stylesheet" href="./assets/styles/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/styles/style.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-    <header>
-        <img id="logo" src="./assets/images/Logo.png" alt="Global Glimpse Voyage Logo"/>
-        <h1 class="projectTitle">Global Glimpse Voyage</h1>
-    </header>
     <!--Project Container Starts-->
-    <div class="project-container">
-        <div id="projectDescription">
-           
-            <h2 id="project-header">Project Description</h2>
-            <p id="project-details">The purpose of this application is to provide users with the ability to enter a city and locating particular locations within the city.
-                These locations <br/>can be for food, entertainment, or outdoor activities. Along with those feature, users will be able to be aware of current weather conditions.
-            </p>
-        </div>
-        <div class="form-container">
-            <form class="submitForm">
-                <input id="town-input" type="text" placeholder="Enter Your City" />
-                <button id="townInputBtn" type="submit">Search City</button>
-            </form>
-        </div>
-        <section class="weather-map-display">
-       
-            <div class="show-currentWeather"> 
-                <!-- Current Forecast Shows here-->
-                
-            </div>
-            <div class="show-map">
-                <!--Map should show here-->
-                Map will display here!
-            </div>
-            <aside class="town-results">
-                <div class="townResultsContainer">
-                    <ul id="townList">
-                        <!--Town results will show here-->
-                        
-                    </ul>
+    <main>
+        <div class="container py-4">
+            <header class="pb-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+                    <img id="logo" src="./assets/images/Logo.png" alt="Global Glimpse Voyage Logo" width="50" />
+                    <span class="fs-4"><b>Global Glimpse Voyage</b></span>
+                </a>
+            </header>
+            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+                <div class="container-fluid py-5 text-center ">
+                    <h1 class="display-5 fw-bold">Explore. Dream. Discover.</h1>
+                    <p class="col-md-12 fs-4">Navigate your dream destinations with our guidance!</p>
+                    <div class="col-lg-7 col-md-8 mx-auto">
+                        <div class="form-container">
+                            <form class="submitForm">
+                                <input id="town-input" class="form-control form-control-lg mb-4" type="text" placeholder="Enter Your City" />
+                                <button id="townInputBtn" type="submit" class="btn btn-primary btn-lg" type="button">Search City</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </aside>
-        </section>
-
-    </div>
+            </div>
+            <div class="row align-items-md-stretch">
+                <div class="col-md-3">
+                    <div id="weather-card">
+                        <!-- WEATHER CARD -->
+                        <div class="card card-weather text-center mb-4">
+                            <div class="card-body show-currentWeather">
+                            </div>
+                            <!-- Current Forecast Shows here-->
+                        </div>
+                        <!-- WEATHER CARD -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="city-map" style="height:400px;"></div>
+                </div>
+                <div class="col-md-3">
+                    <!-- Recent Searches -->
+                    <div id="recent-search-card">
+                        <h3>Recent Search</h3>
+                        <aside class="town-results">
+                            <div class="townResultsContainer">
+                                <ul id="townList" class="list-group">
+                                    <!--Town results will show here-->
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <footer class="pt-3 mt-4 text-body-secondary border-top">
+                &copy; 2024 Global Glimpse Voyage Team
+            </footer>
+        </div>
+    </main>
     <!--Project Container Ends-->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/scripts/location.js"></script>
     <script src="./assets/scripts/script.js"></script>
+    <!-- Google Places API to autocomplete -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKPIJ3IUh2sNlAYLcwJoIQNYWQU4iLvXU&libraries=places&callback=initMap"></script>
 </body>
 
 </html>
