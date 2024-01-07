@@ -1,6 +1,6 @@
-# SAM Project 1
+# Globle Glimpse Voyage
 
-## Building Project 1
+# Description
 
 The purpose of this project is to use all front end development skill acquired. Developing this project demonstrates... s
 
