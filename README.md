@@ -9,7 +9,7 @@ planning and weather forecasting features.
 
 ## Installation
 
-You don't need to install anything. You can open any browser on your computer or mobile device and navigate to the following link.
+You don't need to install anything. You can open any browser on your computer or mobile device and navigate to the webpage link.
 
 ## Usage
 
