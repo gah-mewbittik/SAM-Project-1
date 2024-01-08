@@ -29,9 +29,7 @@ https://gah-mewbittik.github.io/SAM-Project-1/
 
 ## Credits
 
-Andrew Biron
-Maximillian Segar
-Siva Ramachandran
+Andrew Biron, Maximillian Segar, and Siva Ramachandran
 
 ## License
 
