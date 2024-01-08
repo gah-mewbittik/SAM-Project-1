@@ -178,6 +178,28 @@ function init() {
     displayTownList();
 }
 
+//Alert
+const alertPlaceholder = document.getElementById('town-input')
+
+const alert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('townInputBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    alert('Enter a city name!', 'Close')
+  })
+}
+
 //function acquireTownData's event listener
 submitForm.addEventListener('submit', acquireTownData);
 
