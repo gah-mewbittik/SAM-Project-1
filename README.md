@@ -14,7 +14,7 @@ You don't need to install anything. You can open any browser on your computer or
 ## Usage
 
 To use this application, simply click the following link: 
-From there you will be able view the application and use it by simply clicking into the input area.   
+From there you will be able view the application and use it by simply enter a city and click on search button.
 
 ![Initial Page](assets/images/initialPage.png)
 ![Auto Complete](assets/images/googleAutoComplete.png)
